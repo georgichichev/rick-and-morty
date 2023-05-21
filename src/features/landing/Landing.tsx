@@ -1,7 +1,9 @@
-import { LinkIcon, StarIcon } from '@chakra-ui/icons';
-import { Button, Flex, Heading } from '@chakra-ui/react';
+import { ArrowForwardIcon, LinkIcon } from '@chakra-ui/icons';
+import { Button, Flex, Heading, Link } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 export const Landing = () => {
+  const navigate = useNavigate();
   return (
     <Flex
       w="100%"
@@ -16,12 +18,18 @@ export const Landing = () => {
         Rick and Morty API
       </Heading>
       <Flex gap={5}>
-        <Button colorScheme="orange" leftIcon={<StarIcon />}>
+        <Button
+          colorScheme="orange"
+          rightIcon={<ArrowForwardIcon />}
+          onClick={() => navigate('/asdasd')}
+        >
           Get Started
         </Button>
-        <Button colorScheme="purple" leftIcon={<LinkIcon />}>
-          Github Repo
-        </Button>
+        <Link href="https://github.com/georgichichev/rick-and-morty" target="blank">
+          <Button colorScheme="purple" leftIcon={<LinkIcon />}>
+            Github Repo
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );
