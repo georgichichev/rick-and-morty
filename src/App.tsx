@@ -1,9 +1,10 @@
 import { AppProvider } from '@/providers/app-provider';
+import { AppRoutes } from './routes';
 
 function App() {
   return (
     <AppProvider>
-      <div>Rick and morty</div>
+      <AppRoutes />
     </AppProvider>
   );
 }
