@@ -4,10 +4,6 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -23,6 +19,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "tsconfig.paths.json"],
+  "exclude": ["node_modules"],
+  "extends": "./tsconfig.paths.json",
   "references": [{ "path": "./tsconfig.node.json" }]
 }
