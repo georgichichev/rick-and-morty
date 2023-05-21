@@ -1,5 +1,11 @@
+import { AppProvider } from './providers/app-provider';
+
 function App() {
-    return <div>Rick and morty</div>;
+  return (
+    <AppProvider>
+      <div>Rick and morty</div>;
+    </AppProvider>
+  );
 }
 
 export default App;
