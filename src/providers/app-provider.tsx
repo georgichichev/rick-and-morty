@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import { ReactNode, Suspense } from 'react';
 
 interface AppProviderProps {
@@ -5,5 +6,9 @@ interface AppProviderProps {
 }
 
 export const AppProvider = ({ children }: AppProviderProps) => {
-  return <Suspense fallback={<div>Loading app...</div>}>{children}</Suspense>;
+  return (
+    <ChakraProvider>
+      <Suspense fallback={<div>Loading app...</div>}>{children}</Suspense>
+    </ChakraProvider>
+  );
 };
