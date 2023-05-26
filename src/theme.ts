@@ -8,9 +8,9 @@ export const theme = {
     },
     text: {
       primary: chakraTheme.colors.gray[100],
-      hover: chakraTheme.colors.orange[300],
+      hover: chakraTheme.colors.orange[400],
       disabled: '#7E7E7E',
     },
-    brand: { orange: chakraTheme.colors.orange[300] },
+    brand: { orange: chakraTheme.colors.orange[400] },
   },
 };
