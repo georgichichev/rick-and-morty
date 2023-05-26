@@ -21,7 +21,7 @@ export const Landing = () => {
         <Button
           colorScheme="orange"
           rightIcon={<ArrowForwardIcon />}
-          onClick={() => navigate('/asdasd')}
+          onClick={() => navigate('/app')}
         >
           Get Started
         </Button>
