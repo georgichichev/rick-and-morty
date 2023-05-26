@@ -15,9 +15,9 @@ const navigation: NavigationItem[] = [
 
 export const Header = () => {
   return (
-    <Flex justify="space-between" align="center">
-      <StarIcon />
-      <UnorderedList display="flex" styleType="none" gap={theme.space[6]}>
+    <Flex justify="space-between" align="center" height={50} paddingBottom={theme.space[5]}>
+      <StarIcon fontSize="2xl" />
+      <UnorderedList display={{ base: 'none', md: 'flex' }} styleType="none" gap={theme.space[6]}>
         {navigation.map((navItem) => {
           return (
             <ListItem>
