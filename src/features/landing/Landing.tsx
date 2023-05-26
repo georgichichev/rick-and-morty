@@ -1,3 +1,4 @@
+import { theme } from '@/theme';
 import { ArrowForwardIcon, LinkIcon } from '@chakra-ui/icons';
 import { Button, Flex, Heading, Link } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +13,7 @@ export const Landing = () => {
       justify="center"
       align="center"
       h="100vh"
-      bg="gray.800"
+      bg={theme.colors.background}
     >
       <Heading color="gray.100" size="4xl">
         Rick and Morty API
