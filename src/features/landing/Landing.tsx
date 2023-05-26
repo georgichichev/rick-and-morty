@@ -9,16 +9,16 @@ export const Landing = () => {
     <Flex
       w="100%"
       direction="column"
-      gap={10}
+      gap={theme.space[10]}
       justify="center"
       align="center"
       h="100vh"
-      bg={theme.colors.background}
+      bg={theme.colors.background.default}
     >
-      <Heading color="gray.100" size="4xl">
+      <Heading textAlign="center" color={theme.colors.text.primary} size="4xl">
         Rick and Morty API
       </Heading>
-      <Flex gap={5}>
+      <Flex gap={theme.space[4]}>
         <Button
           colorScheme="orange"
           rightIcon={<ArrowForwardIcon />}
