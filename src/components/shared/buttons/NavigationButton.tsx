@@ -1,26 +1,29 @@
 import { theme } from '@/theme';
-import { styled } from '@chakra-ui/react';
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
+import styled from '@emotion/styled';
 
 interface NavigationButtonProps {
   children: string;
   to: string;
+  isMobile?: boolean;
 }
 
-const NavButton = styled(NavLink, {
-  baseStyle: {
-    fontWeight: theme.fontWeights.bold,
-    fontSize: theme.fontSizes['lg'],
+interface StyledNavButtonProps {
+  isMobile?: boolean;
+}
+
+const NavButton = styled(NavLink)<StyledNavButtonProps>(() => ({
+  fontWeight: theme.fontWeights.bold,
+  fontSize: theme.fontSizes['lg'],
+  color: theme.colors.text.primary,
+  ':hover': {
     color: theme.colors.text.primary,
-    _hover: {
-      color: theme.colors.text.hover,
-      borderColor: theme.colors.text.hover,
-    },
-    transition: 'ease-in-out 0.2s',
-    paddingBottom: theme.space[1],
+    borderColor: theme.colors.text.hover,
   },
-});
+  transition: 'ease-in-out 0.2s',
+  paddingBottom: theme.space[1],
+}));
 
 export const NavigationButton: FC<NavigationButtonProps> = ({ children, to }) => {
   return (
